@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega328P</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Blink_LEDs_Tasks</AssemblyName>
+    <Name>Blink_LEDs_Tasks</Name>
+    <RootNamespace>Blink_LEDs_Tasks</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <avrtoolserialnumber />
+    <avrdeviceexpectedsignature>0x1E950F</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+    <PercepioTrace>
+      <TargetOS>FreeRTOS</TargetOS>
+      <Frequency>64000000</Frequency>
+      <EnableTraceInterrupts>False</EnableTraceInterrupts>
+      <EnableNonintrusive>False</EnableNonintrusive>
+      <EnableTargetOS>True</EnableTargetOS>
+      <EnableApplicationOutput>True</EnableApplicationOutput>
+      <EnableDataWatchPoints>True</EnableDataWatchPoints>
+      <EnablePC>False</EnablePC>
+      <EnablePCPolled>False</EnablePCPolled>
+      <PolledFrequency>1000</PolledFrequency>
+      <EnableMcu>False</EnableMcu>
+      <EnableOsAwareness>False</EnableOsAwareness>
+      <HWApplicationOutput>False</HWApplicationOutput>
+      <HWInterrupt>False</HWInterrupt>
+      <HWIntrusiveDataWatch>True</HWIntrusiveDataWatch>
+      <HWNonintrusiveDataWatch>False</HWNonintrusiveDataWatch>
+      <HWPolledDataWatch>False</HWPolledDataWatch>
+      <HWPolledProgramCounterSampling>True</HWPolledProgramCounterSampling>
+      <HWProfiling>False</HWProfiling>
+      <HWProgramCounterSampling>False</HWProgramCounterSampling>
+      <ApplicationOutput0>String</ApplicationOutput0>
+      <ApplicationOutput1>String</ApplicationOutput1>
+      <ApplicationOutput2>String</ApplicationOutput2>
+      <ApplicationOutput3>String</ApplicationOutput3>
+      <ApplicationOutput4>String</ApplicationOutput4>
+      <ApplicationOutput5>String</ApplicationOutput5>
+      <ApplicationOutput6>String</ApplicationOutput6>
+      <ApplicationOutput7>String</ApplicationOutput7>
+      <ApplicationOutput8>String</ApplicationOutput8>
+      <ApplicationOutput9>String</ApplicationOutput9>
+      <ApplicationOutput10>String</ApplicationOutput10>
+      <ApplicationOutput11>String</ApplicationOutput11>
+      <ApplicationOutput12>String</ApplicationOutput12>
+      <ApplicationOutput13>String</ApplicationOutput13>
+      <ApplicationOutput14>String</ApplicationOutput14>
+      <ApplicationOutput15>String</ApplicationOutput15>
+      <ApplicationOutput16>String</ApplicationOutput16>
+      <ApplicationOutput17>String</ApplicationOutput17>
+      <ApplicationOutput18>String</ApplicationOutput18>
+      <ApplicationOutput19>String</ApplicationOutput19>
+      <ApplicationOutput20>String</ApplicationOutput20>
+      <ApplicationOutput21>String</ApplicationOutput21>
+      <ApplicationOutput22>String</ApplicationOutput22>
+      <ApplicationOutput23>String</ApplicationOutput23>
+      <ApplicationOutput24>String</ApplicationOutput24>
+      <ApplicationOutput25>String</ApplicationOutput25>
+      <ApplicationOutput26>String</ApplicationOutput26>
+      <ApplicationOutput27>String</ApplicationOutput27>
+      <ApplicationOutput28>String</ApplicationOutput28>
+      <ApplicationOutput29>String</ApplicationOutput29>
+      <ApplicationOutput30>String</ApplicationOutput30>
+      <ApplicationOutput31>String</ApplicationOutput31>
+    </PercepioTrace>
+    <ResetRule>0</ResetRule>
+    <EraseKey />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.106\gcc\dev\atmega328p"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../FreeRTOS Source/include</Value>
+            <Value>..</Value>
+            <Value>../Trace Recorder/include</Value>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.106\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.106\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.106\gcc\dev\atmega328p"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../FreeRTOS_Source/include</Value>
+            <Value>..</Value>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.106\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.106\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="FreeRTOS_Source\include\croutine.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\deprecated_definitions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\event_groups.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\FreeRTOS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\mpu_prototypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\mpu_wrappers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\portable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\portmacro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\projdefs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\queue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\semphr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\StackMacros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\task.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\timers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\include\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\source\croutine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\source\event_groups.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\source\list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\source\portable\heap_1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\source\portable\port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\source\portable\portmacro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\source\queue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\source\tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOS_Source\source\timers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Blink_LEDs_Tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FreeRTOS_Source\" />
+    <Folder Include="FreeRTOS_Source\include\" />
+    <Folder Include="FreeRTOS_Source\source\" />
+    <Folder Include="FreeRTOS_Source\source\portable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FreeRTOS_Source\include\stdint.readme">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="FreeRTOS_Source\source\readme.txt">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
